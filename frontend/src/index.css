@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-bebas-weight: 400;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-bebas {
+  font-family: var(--font-bebas);
+  font-weight: var(--font-bebas-weight);
+  letter-spacing: 0.5px;
+}
+
+@keyframes blink-red {
+  0%, 100% {
+    background-color: rgb(127, 29, 29); /* red-900 */
+  }
+  50% {
+    background-color: rgb(255, 42, 42); /* red-700 */
+  }
+}
+
+.blink-red {
+  animation: blink-red 1.5s ease-in-out infinite;
+}
+
+/* Custom scrollbar for cards */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
