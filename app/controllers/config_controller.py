@@ -67,3 +67,63 @@ def update_database():
         return jsonify({'success': True}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+
+@config_bp.route('/state/export', methods=['GET'])
+def export_order_state():
+    """Exporta el estado persistente de órdenes para backup"""
+    try:
+        from main_api import order_service
+        
+        state_json = order_service.state_manager.export_state()
+        state_path = order_service.state_manager.get_state_file_path()
+        
+        return jsonify({
+            'success': True,
+            'data': json.loads(state_json),
+            'file_path': state_path
+        }), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@config_bp.route('/state/import', methods=['POST'])
+def import_order_state():
+    """Restaura el estado persistente de órdenes desde un backup"""
+    try:
+        from main_api import order_service
+        
+        data = request.get_json()
+        state_json = data.get('data')
+        
+        if not state_json:
+            return jsonify({'error': 'No se proporcionaron datos de estado'}), 400
+        
+        # Convertir a JSON string si es dict
+        if isinstance(state_json, dict):
+            state_json = json.dumps(state_json)
+        
+        success = order_service.state_manager.import_state(state_json)
+        
+        if success:
+            return jsonify({'success': True, 'message': 'Estado restaurado correctamente'}), 200
+        else:
+            return jsonify({'error': 'Formato de estado inválido'}), 400
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@config_bp.route('/state/clear-delivered', methods=['POST'])
+def clear_delivered_orders():
+    """Limpia manualmente todas las órdenes con estado DELIVERED"""
+    try:
+        from main_api import order_service
+        
+        order_service.state_manager.clear_all_delivered()
+        
+        return jsonify({
+            'success': True,
+            'message': 'Órdenes entregadas eliminadas correctamente'
+        }), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500

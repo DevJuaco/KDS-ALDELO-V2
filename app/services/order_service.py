@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Callable
 from app.models.order import Order, OrderStatus
 from app.repositories.order_repository import OrderRepository
+from app.utils.order_state_manager import OrderStateManager
 
 class OrderService:
     def __init__(self, repository: OrderRepository):
@@ -14,6 +15,9 @@ class OrderService:
         self._last_sync = datetime.now() - timedelta(minutes=5) # Start with a small window
         self._stop_event = threading.Event()
         self._on_event_cb: Optional[Callable[[str, Order], None]] = None
+        
+        # Estado persistente (JSON)
+        self.state_manager = OrderStateManager()
         
         # Valid state transitions
         self._valid_transitions = {
@@ -34,6 +38,19 @@ class OrderService:
         logging.info("KDS Polling Service started.")
 
     def stop_polling(self):
+        # Guardar estado persistente antes de parar
+        with self._cache_lock:
+            for order in self._cache.values():
+                self.state_manager.update_order_status(
+                    order.order_id,
+                    order.status.value,
+                    {
+                        "items": {
+                            str(item.item_id): {"status": item.status.value}
+                            for item in order.items
+                        }
+                    }
+                )
         self._stop_event.set()
         if hasattr(self, '_polling_thread'):
             self._polling_thread.join()
@@ -42,10 +59,32 @@ class OrderService:
         """Initial load of active orders"""
         logging.info("Initializing KDS cache...")
         active_orders = self.repository.get_active_orders()
+        
+        # Cargar estados persistentes previos
+        saved_states = self.state_manager.get_all_states()
+        
         with self._cache_lock:
             for order in active_orders:
+                # Restaurar estado previo si existe
+                saved_order_state = saved_states.get(str(order.order_id))
+                if saved_order_state:
+                    try:
+                        order.status = OrderStatus(saved_order_state.get("status", order.status.value))
+                        
+                        # Restaurar estados de items
+                        if "items" in saved_order_state:
+                            saved_items = saved_order_state["items"]
+                            for item in order.items:
+                                saved_item = saved_items.get(str(item.item_id))
+                                if saved_item:
+                                    item.status = OrderStatus(saved_item.get("status", item.status.value))
+                    except (ValueError, KeyError):
+                        # Si hay error restaurando, usar el estado de Aldelo
+                        pass
+                
                 self._cache[order.order_id] = order
-        logging.info(f"Cache initialized with {len(active_orders)} orders.")
+        
+        logging.info(f"Cache initialized with {len(active_orders)} orders. {len(saved_states)} states restored from persistence.")
 
     def _poll_loop(self, interval: float):
         while not self._stop_event.is_set():
@@ -124,6 +163,18 @@ class OrderService:
             order.status = new_status
             order.last_modified = datetime.now()
             
+            # Guardar cambio a persistencia
+            self.state_manager.update_order_status(
+                order_id,
+                new_status.value,
+                {
+                    "items": {
+                        str(item.item_id): {"status": item.status.value}
+                        for item in order.items
+                    }
+                }
+            )
+            
             self._emit("order_updated", order)
             return order
 
@@ -156,6 +207,19 @@ class OrderService:
             # If no items are READY, it's back to CREATED (unless it was explicitly moved to something else)
             elif all(i.status == OrderStatus.CREATED for i in order.items):
                  order.status = OrderStatus.CREATED
+
+            # Guardar cambio a persistencia
+            self.state_manager.update_item_status(order_id, item_id, new_status.value)
+            self.state_manager.update_order_status(
+                order_id,
+                order.status.value,
+                {
+                    "items": {
+                        str(itm.item_id): {"status": itm.status.value}
+                        for itm in order.items
+                    }
+                }
+            )
 
             self._emit("order_updated", order)
             return order
