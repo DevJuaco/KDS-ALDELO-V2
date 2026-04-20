@@ -1,53 +1,51 @@
+const parseSafeDate = (dateStr) => {
+  if (!dateStr) return null;
+  const cleaned = dateStr.replace('GMT', '').trim();
+  const date = new Date(cleaned);
+  return isNaN(date.getTime()) ? null : date;
+};
+
 export function formatOrderTime(dateString) {
-  const date = new Date(dateString)
-  return date.toLocaleTimeString('es-ES', {
+  const orderTime = parseSafeDate(dateString);
+  if (!orderTime) return '--:--';
+  return orderTime.toLocaleTimeString('es-CO', {
     hour: '2-digit',
     minute: '2-digit',
-    hour12: false
-  })
+    hour12: true,
+  });
 }
 
 export function calculateElapsedTime(dateString) {
-  const date = new Date(dateString)
-  const now = new Date()
-  const diff = Math.floor((now - date) / 1000)
-
-  const hours = Math.floor(diff / 3600)
-  const minutes = Math.floor((diff % 3600) / 60)
-  const seconds = diff % 60
-
-  if (hours > 0) {
-    return `${hours}h ${minutes}m`
-  }
-  if (minutes > 0) {
-    return `${minutes}m ${seconds}s`
-  }
-  return `${seconds}s`
+  const orderDate = parseSafeDate(dateString);
+  if (!orderDate) return '0m';
+  const diffMs = new Date().getTime() - orderDate.getTime();
+  const diffMins = Math.floor(Math.max(0, diffMs) / 60000);
+  const diffHours = Math.floor(diffMins / 60);
+  const remainingMins = diffMins % 60;
+  return diffHours > 0 ? `${diffHours}h ${remainingMins}m` : `${diffMins}m`;
 }
 
 export function getTimeColor(dateString, currentTime, orderType) {
-  const elapsedTimeString = calculateElapsedTime(dateString)
-  const hoursMatch = elapsedTimeString.match(/(\d+)h/)
-  const minutesMatch = elapsedTimeString.match(/(\d+)m/)
-  const hours = hoursMatch ? parseInt(hoursMatch[1]) : 0
-  const minutes = minutesMatch ? parseInt(minutesMatch[1]) : 0
-  const totalMinutes = hours * 60 + minutes
+  const orderDate = parseSafeDate(dateString);
+  if (!orderDate) return 'text-green-600 font-bold';
 
-  // Default alert times by order type
-  const alertTimes = {
-    '1': 30, // Dine-in
-    '2': 25, // Take-out
-    '3': 35, // Drive-thru
-    '4': 40  // Delivery
+  const diffMins = Math.floor((currentTime.getTime() - orderDate.getTime()) / 60000);
+  const timeSettings = JSON.parse(localStorage.getItem('kds-time-settings') || '{}');
+
+  let alertDelay = 30;
+  if (orderType) {
+    switch (orderType) {
+      case '1': alertDelay = parseInt(timeSettings.alertDelayDineIn ?? timeSettings.alertDelay ?? '30'); break;
+      case '2': alertDelay = parseInt(timeSettings.alertDelayTakeOut ?? timeSettings.alertDelay ?? '30'); break;
+      case '3': alertDelay = parseInt(timeSettings.alertDelayDelivery ?? timeSettings.alertDelay ?? '30'); break;
+      case '4': alertDelay = parseInt(timeSettings.alertDelayDriveThru ?? timeSettings.alertDelay ?? '30'); break;
+      default:  alertDelay = parseInt(timeSettings.alertDelayDineIn ?? timeSettings.alertDelay ?? '30');
+    }
+  } else {
+    alertDelay = parseInt(timeSettings.alertDelay ?? timeSettings.alertDelayDineIn ?? '30');
   }
 
-  const alertTime = alertTimes[orderType] || 30
-
-  if (totalMinutes >= alertTime + 10) {
-    return 'text-red-700'
-  }
-  if (totalMinutes >= alertTime) {
-    return 'text-orange-600'
-  }
-  return 'text-green-600'
+  if (diffMins > alertDelay) return 'text-red-600 font-bold';
+  if (diffMins > 15) return 'text-yellow-600 font-bold';
+  return 'text-green-600 font-bold';
 }

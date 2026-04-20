@@ -1,13 +1,66 @@
 {
-  "name": "frontend",
+  "name": "kds-aldelo",
   "private": true,
-  "version": "0.0.0",
+  "version": "3.1.1",
   "type": "module",
+  "description": "KDS Aldelo - Kitchen Display System",
+  "author": "Sip",
+  "main": "electron/main.cjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "electron": "electron .",
+    "electron-dev": "npm run build && electron .",
+    "package:win": "npm run build && electron-builder --win"
+  },
+  "build": {
+    "appId": "com.solucionesintegralespos.kdsaldelo",
+    "productName": "KDS Aldelo",
+    "copyright": "Copyright © 2024",
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "extraResources": [
+      {
+        "from": "../dist/kds_api.exe",
+        "to": "kds_api.exe",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "../zones.json",
+        "to": "zones.json"
+      },
+      {
+        "from": "../database.txt",
+        "to": "database.txt"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "public/favicon.ico",
+      "artifactName": "${productName}-${version}-Setup.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "KDS Aldelo"
+    }
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.2",
@@ -22,6 +75,8 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
     "autoprefixer": "^10.5.0",
+    "electron": "^33.4.11",
+    "electron-builder": "^26.8.1",
     "eslint": "^9.39.4",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",

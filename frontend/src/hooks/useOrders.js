@@ -4,36 +4,61 @@ import { useState, useEffect, useCallback, useRef } from "react";
  * Hook para gestionar las órdenes del KDS mediante WebSockets y REST API.
  * Mapea el modelo de datos "Moderno" del backend al modelo "Clásico" que usa la UI.
  */
+function playNotificationSound() {
+  try {
+    const settings = localStorage.getItem('kds-display-settings');
+    const soundEnabled = settings ? JSON.parse(settings).soundAlert !== false : true;
+    if (!soundEnabled) return;
+    const audio = new Audio('/notification-sound.mp3');
+    audio.volume = 0.3;
+    audio.play().catch(() => {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.frequency.value = 800; osc.type = 'sine';
+        gain.gain.setValueAtTime(0.3, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.5);
+        osc.start(ctx.currentTime); osc.stop(ctx.currentTime + 0.5);
+      } catch {}
+    });
+  } catch {}
+}
+
 export const useOrders = (url = `ws://${window.location.hostname}:5001/ws/orders`) => {
   const [ordersMap, setOrdersMap] = useState({});
   const [isConnected, setIsConnected] = useState(false);
   const [loading, setLoading] = useState(true);
   const socketRef = useRef(null);
   const reconnectTimeoutRef = useRef();
+  const isInitRef = useRef(true);
 
   // Mapeo de datos Moderno -> Clásico (Aldelo compatible)
   const mapOrder = useCallback((data) => {
+    const items = (data.items || []).slice().sort((a, b) => a.item_id - b.item_id);
     return {
       orderheaders: {
         OrderID: data.order_id,
-        EmployeeName: data.employee_name || 'N/A',
+        EmployeeName: data.employee_name || '',
         OrderDateTime: data.order_date || new Date().toISOString(),
         OrderStatus: data.status === 'READY' ? 3 : 1,
         OrderType: String(data.order_type || '1'),
-        CustomerName: data.customer_name || 'Cliente',
+        CustomerName: data.customer_name || '',
         Turn: data.order_id,
-        DineInTableText: data.order_type === 1 ? (data.customer_name || '---') : undefined,
-        SpecificCustomerName: data.total > 0 ? null : data.customer_name 
+        DineInTableText: data.dine_in_table_text || '',
+        SpecificCustomerName: data.specific_customer_name || '',
       },
-      ordertransactions: (data.items || []).map((item) => ({
+      ordertransactions: items.map((item) => ({
         OrderTransactionID: item.item_id,
         MenuItemText: item.name,
         Quantity: item.quantity,
         MenuItemUnitPrice: item.price,
         ExtendedPrice: item.price * item.quantity,
-        MenuItemNotification: "5",
-        TransactionStatus: "1",
+        MenuItemNotification: item.notification || '5',
+        TransactionStatus: item.transaction_status || '1',
         Status: item.status === 'READY' ? 'FINISHED' : 'PREPARING',
+        ShortNote: item.short_note || '',
         modifiers: item.modifiers || [],
       })),
     };
@@ -61,16 +86,22 @@ export const useOrders = (url = `ws://${window.location.hostname}:5001/ws/orders
           setOrdersMap((prev) => {
             switch (type) {
               case "init":
+                isInitRef.current = false;
                 return (data || []).reduce((acc, rawOrder) => {
                   const order = mapOrder(rawOrder);
                   acc[order.orderheaders.OrderID] = order;
                   return acc;
                 }, {});
 
-              case "order_created":
-              case "order_updated":
+              case "order_created": {
+                const mappedOrder = mapOrder(data);
+                if (!isInitRef.current) playNotificationSound();
+                return { ...prev, [mappedOrder.orderheaders.OrderID]: mappedOrder };
+              }
+              case "order_updated": {
                 const mappedOrder = mapOrder(data);
                 return { ...prev, [mappedOrder.orderheaders.OrderID]: mappedOrder };
+              }
 
               case "order_deleted":
                 const idToDelete = data.order_id || data.OrderID;

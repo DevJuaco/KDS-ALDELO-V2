@@ -4,6 +4,7 @@ from flask import Flask, send_from_directory
 from app.repositories.order_repository import OrderRepository
 from app.services.order_service import OrderService
 from app.controllers.order_controller import create_order_blueprint
+from app.controllers.config_controller import config_bp
 from app.websockets.order_socket import OrderSocketHandler
 from flask_cors import CORS
 
@@ -43,6 +44,7 @@ order_socket_handler = OrderSocketHandler(app, order_service)
 
 # Register Blueprints
 app.register_blueprint(create_order_blueprint(order_service))
+app.register_blueprint(config_bp)
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')

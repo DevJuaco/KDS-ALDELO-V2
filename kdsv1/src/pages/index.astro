@@ -1,0 +1,21 @@
+---
+import DRMProvider from "../components/drm/DRMProvider.tsx";
+import KDS from "./_KDS.tsx";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>KDS - Kitchen Display System</title>
+  </head>
+  <body>
+    <DRMProvider client:only="react">
+      {/* KDS solo se carga cuando hay licencia válida */}
+      <KDS client:load />
+    </DRMProvider>
+  </body>
+</html>

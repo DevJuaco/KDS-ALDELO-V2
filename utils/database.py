@@ -76,6 +76,13 @@ def leer_clave_registro2():
         return f"Error kds: {e}"
 
 
+def reset_db_path():
+    """Reset cached DB path so it is re-read from database.txt on the next connection"""
+    global _ruta_db, _first_conn
+    _ruta_db = None
+    _first_conn = True
+
+
 def dbconn():
     """Conexión a la base de datos principal"""
     global _first_conn

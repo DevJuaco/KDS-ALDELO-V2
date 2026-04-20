@@ -17,6 +17,9 @@ class OrderItem:
     price: float
     status: OrderStatus = OrderStatus.CREATED
     modifiers: List[str] = field(default_factory=list)
+    transaction_status: str = "1"
+    notification: str = "5"
+    short_note: str = ""
 
 @dataclass
 class Order:
@@ -29,6 +32,8 @@ class Order:
     last_modified: Optional[datetime] = None
     items: List[OrderItem] = field(default_factory=list)
     total: float = 0.0
+    specific_customer_name: str = ""
+    dine_in_table_text: str = ""
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -39,6 +44,8 @@ class Order:
             "customer_name": self.customer_name,
             "order_date": self.order_date.isoformat() if self.order_date else None,
             "last_modified": self.last_modified.isoformat() if self.last_modified else None,
+            "specific_customer_name": self.specific_customer_name,
+            "dine_in_table_text": self.dine_in_table_text,
             "items": [
                 {
                     "item_id": item.item_id,
@@ -46,7 +53,10 @@ class Order:
                     "quantity": item.quantity,
                     "price": item.price,
                     "status": item.status.value,
-                    "modifiers": item.modifiers
+                    "modifiers": item.modifiers,
+                    "transaction_status": item.transaction_status,
+                    "notification": item.notification,
+                    "short_note": item.short_note,
                 } for item in self.items
             ],
             "total": self.total

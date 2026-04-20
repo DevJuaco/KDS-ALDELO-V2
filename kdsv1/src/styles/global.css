@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+
+@import "tailwindcss";
+
+:root {
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-bebas-weight: 400;
+}
+
+body.use-default-font {
+  --font-bebas: "Poppins", sans-serif;
+  --font-bebas-weight: 600;
+}
+
+.font-bebas {
+  font-family: var(--font-bebas);
+  font-weight: var(--font-bebas-weight);
+  letter-spacing: 0.5px;
+}
+
+@keyframes blink-red {
+
+  0%,
+  100% {
+    background-color: rgb(127, 29, 29);
+    /* red-900 */
+  }
+
+  50% {
+    background-color: rgb(255, 42, 42);
+    /* red-700 */
+  }
+}
+
+.blink-red {
+  animation: blink-red 1.5s ease-in-out infinite;
+}

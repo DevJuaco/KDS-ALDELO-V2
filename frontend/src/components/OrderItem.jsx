@@ -19,7 +19,7 @@ export default function OrderItem({
           ? 'border-l-4 border-l-green-500 bg-green-50'
           : 'border-l-4 border-l-transparent'
       } ${expandedView ? 'p-2 rounded-lg shadow-md mb-3' : ''}`}>
-      <div className={`flex items-start justify-between gap-2 p-2`}>
+      <div className={`flex items-start justify-between gap-2 py-1 px-2`}>
         <div className="flex-1 min-w-0">
           <div className={`text-xl leading-tight font-bebas font-normal flex gap-2 ${isCanceled
             ? 'line-through text-red-600'

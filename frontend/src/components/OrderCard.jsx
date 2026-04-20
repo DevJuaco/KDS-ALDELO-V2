@@ -387,6 +387,22 @@ export default function OrderCard({
   const typeInfo = getOrderTypeInfo(orderType);
   const elapsedTimeString = calculateElapsedTime(order.orderheaders.OrderDateTime);
 
+  // Lógica de cliente: solo texto real en cabecera, solo numérico en pie
+  const isOnlyNumeric = (s) => s && /^\d+$/.test(s.trim());
+  const isDefaultPlaceholder = (s) => !s || /^cliente$/i.test(s.trim());
+  const specificName = order.orderheaders.SpecificCustomerName || '';
+  const clienteRaw = typeInfo.cliente || '';
+  const headerClient = (!isOnlyNumeric(specificName) && !isDefaultPlaceholder(specificName))
+    ? specificName
+    : (!isOnlyNumeric(clienteRaw) && !isDefaultPlaceholder(clienteRaw))
+      ? clienteRaw
+      : '';
+  const footerNumericClient = (specificName && isOnlyNumeric(specificName))
+    ? specificName
+    : (clienteRaw && isOnlyNumeric(clienteRaw))
+      ? clienteRaw
+      : '';
+
   const hasUnpreparedItems = order.ordertransactions.some((t) => t.Status === 'PREPARING');
   const isOverdue = hasUnpreparedItems && (() => {
     const hoursMatch = elapsedTimeString.match(/(\d+)h/);
@@ -408,8 +424,14 @@ export default function OrderCard({
     return totalMinutes > alertdelay;
   })();
 
-  // Transacciones a mostrar (subset si es virtual card, o todas si no)
-  const transactionsToRender = displayTransactions || order.ordertransactions;
+  // Transacciones a mostrar (subset si es virtual card, o todas si no) filtrando los combinados
+  const transactionsToRender = (displayTransactions || order.ordertransactions)
+    .filter((t) => !t.Combined)
+    .slice()
+    .sort((a, b) => a.OrderTransactionID - b.OrderTransactionID);
+
+  // No mostrar la orden si se quedó sin items por estar todos combinados/ocultos.
+  if (transactionsToRender.length === 0) return null;
 
   return (
     <div
@@ -443,7 +465,7 @@ export default function OrderCard({
           </div>
           <div className="text-right">
             <div className="font-bold text-base">
-              {typeInfo.tipo} {typeInfo.cliente} - {showElapsedTimeInHeader ? calculateElapsedTime(order.orderheaders.OrderDateTime) : formatOrderTime(order.orderheaders.OrderDateTime)}
+              {typeInfo.tipo}{headerClient ? ` - ${headerClient}` : ''} - {showElapsedTimeInHeader ? calculateElapsedTime(order.orderheaders.OrderDateTime) : formatOrderTime(order.orderheaders.OrderDateTime)}
             </div>
           </div>
         </div>
@@ -465,7 +487,7 @@ export default function OrderCard({
       {/* LISTA DE ITEMS */}
       <div
         ref={itemsContainerRef}
-        className={`flex-1 overflow-hidden bg-gray-50 min-h-0 custom-scrollbar ${!hasContinuation ? 'pb-4' : ''}`}
+        className={`flex-1 overflow-y-auto bg-gray-50 min-h-0 custom-scrollbar ${!hasContinuation ? 'pb-4' : ''}`}
       >
         {transactionsToRender.map((t, idx) => (
           <div
@@ -494,9 +516,9 @@ export default function OrderCard({
       {!hasContinuation && (
         <div className="bg-white border-t border-gray-200">
           <div className="text-center text-xl">
-            {order.orderheaders.SpecificCustomerName && /^\d+$/.test(order.orderheaders.SpecificCustomerName) && (
+            {footerNumericClient && (
               <div className="font-bold text-2xl text-dark-700">
-                {order.orderheaders.SpecificCustomerName}
+                {footerNumericClient}
               </div>
             )}
             {!showOrderIdInHeader && (

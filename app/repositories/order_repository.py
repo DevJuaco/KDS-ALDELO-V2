@@ -23,7 +23,9 @@ class OrderRepository:
             status=status,
             order_type=row_dict.get('OrderType', 0),
             employee_name=row_dict.get('EmployeeName', 'Unknown'),
-            customer_name=row_dict.get('SpecificCustomerName') or row_dict.get('CustomerName', 'Guest'),
+            customer_name=row_dict.get('CustomerName', '') or '',
+            specific_customer_name=str(row_dict.get('SpecificCustomerName') or ''),
+            dine_in_table_text=str(row_dict.get('DineInTableText') or ''),
             order_date=row_dict['OrderDateTime'],
             last_modified=row_dict.get('EditTimestamp', row_dict['OrderDateTime']),
             items=[],
@@ -73,7 +75,7 @@ class OrderRepository:
             ])
             
             query = f"""
-                SELECT ot.*, mi.MenuItemText, {mod_queries}
+                SELECT ot.*, mi.MenuItemText, mi.MenuItemNotification AS KitchenZone, {mod_queries}
                 FROM OrderTransactions AS ot
                 INNER JOIN MenuItems AS mi ON ot.MenuItemID = mi.MenuItemID
                 WHERE ot.OrderID = ?
@@ -98,15 +100,19 @@ class OrderRepository:
                     name=d['MenuItemText'],
                     quantity=float(d.get('Quantity', 1)),
                     price=float(d.get('MenuItemUnitPrice', 0)),
-                    status=OrderStatus.CREATED, # This will be updated by service if cached
-                    modifiers=modifiers
+                    status=OrderStatus.CREATED,
+                    modifiers=modifiers,
+                    transaction_status=str(d.get('TransactionStatus', '1') or '1'),
+                    notification=str(
+                        d.get('KitchenZone') or
+                        d.get('MenuItemNotification') or
+                        d.get('NotificationStatus') or
+                        ''
+                    ),
+                    short_note=str(d.get('ShortNote', '') or ''),
                 ))
-                
-                # Aditionally, we could store ShortNote in the item if there was a field for it
-                # For now, let's append it to modifiers if it exists
-                if d.get('ShortNote'):
-                    items[-1].modifiers.append(f"NOTA: {d['ShortNote']}")
-                    
+
+            items.sort(key=lambda i: i.item_id)
             return items
         except Exception as e:
             logging.error(f"Error fetching order items for {order_id}: {e}")

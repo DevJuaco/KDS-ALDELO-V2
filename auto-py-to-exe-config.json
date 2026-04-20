@@ -1,0 +1,61 @@
+{
+    "version": "auto-py-to-exe-configuration_v1",
+    "pyinstallerOptions": [
+        {
+            "optionDest": "noconfirm",
+            "value": true
+        },
+        {
+            "optionDest": "filenames",
+            "value": ["d:\\KDSALDELOV2\\main_api.py"]
+        },
+        {
+            "optionDest": "onefile",
+            "value": true
+        },
+        {
+            "optionDest": "console",
+            "value": true
+        },
+        {
+            "optionDest": "name",
+            "value": "kds_api"
+        },
+        {
+            "optionDest": "distpath",
+            "value": "d:\\KDSALDELOV2\\dist"
+        },
+        {
+            "optionDest": "hiddenimports",
+            "value": [
+                "pyodbc",
+                "flask",
+                "flask_cors",
+                "flask_sock",
+                "simple_websocket",
+                "werkzeug",
+                "werkzeug.serving",
+                "werkzeug.routing",
+                "werkzeug.exceptions",
+                "jinja2",
+                "click",
+                "itsdangerous",
+                "logging.handlers",
+                "winreg"
+            ]
+        },
+        {
+            "optionDest": "datas",
+            "value": [
+                ["d:\\KDSALDELOV2\\zones.json", "."],
+                ["d:\\KDSALDELOV2\\database.txt", "."],
+                ["d:\\KDSALDELOV2\\utils", "utils"],
+                ["d:\\KDSALDELOV2\\app", "app"]
+            ]
+        }
+    ],
+    "nonPyinstallerOptions": {
+        "increaseRecursionLimit": true,
+        "manualArguments": ""
+    }
+}
