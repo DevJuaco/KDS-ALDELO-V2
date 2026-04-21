@@ -32973,3 +32973,478 @@
 2026-04-20 10:01:34,249 - root - INFO - Initial state sent: 2 orders transmitted
 2026-04-20 10:01:34,253 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2026 10:01:34] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
 2026-04-20 10:01:34,255 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2026 10:01:34] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-20 10:06:09,061 - werkzeug - INFO - 127.0.0.1 - - [20/Apr/2026 10:06:09] "[35m[1mGET /alert-sound.mp3 HTTP/1.1[0m" 206 -
+2026-04-21 11:04:14,196 - root - INFO - Initializing KDS cache...
+2026-04-21 11:04:14,196 - root - INFO - Fetching active orders since fiscal day start: 2026-04-21 03:00:00
+2026-04-21 11:04:14,197 - root - INFO - Ruta obtenida de database.txt: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:04:14,197 - root - INFO - Conectando a la base de datos en: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:04:14,515 - root - INFO - Cache initialized with 0 orders. 0 states restored from persistence.
+2026-04-21 11:04:14,515 - root - INFO - KDS Polling Service started.
+2026-04-21 11:04:14,516 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-21 11:04:14,522 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.96:5001
+2026-04-21 11:04:14,522 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 11:04:40,361 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:04:40] "GET / HTTP/1.1" 200 -
+2026-04-21 11:04:40,370 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:04:40] "GET /assets/index-DxG08r1p.css HTTP/1.1" 200 -
+2026-04-21 11:04:40,426 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:04:40] "GET /assets/index-C8Ddxl5X.js HTTP/1.1" 200 -
+2026-04-21 11:04:40,466 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:04:40,467 - root - INFO - Initial state sent: 0 orders transmitted
+2026-04-21 11:04:40,471 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:04:40] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:05:12,125 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-21 11:05:12,141 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:05:12] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:05:12,144 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:05:12] "[35m[1mGET /notification-sound.mp3 HTTP/1.1[0m" 206 -
+2026-04-21 11:05:12,184 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:05:12] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:05:52,594 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-21 11:05:52,598 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:05:52] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:06:03,002 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:06:03] "[35m[1mPOST /orders/7/status HTTP/1.1[0m" 500 -
+2026-04-21 11:06:06,292 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:06:06] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:06:06,301 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:06:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:09:12,010 - root - INFO - Initializing KDS cache...
+2026-04-21 11:09:12,011 - root - INFO - Fetching active orders since fiscal day start: 2026-04-21 03:00:00
+2026-04-21 11:09:12,011 - root - INFO - Ruta obtenida de database.txt: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:09:12,011 - root - INFO - Conectando a la base de datos en: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:09:12,260 - root - INFO - Cache initialized with 2 orders. 0 states restored from persistence.
+2026-04-21 11:09:12,260 - root - INFO - KDS Polling Service started.
+2026-04-21 11:09:12,260 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-21 11:09:12,282 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.96:5001
+2026-04-21 11:09:12,282 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 11:09:12,396 - root - INFO - Broadcasting order_updated to 0 clients
+2026-04-21 11:09:12,396 - root - INFO - Broadcasting order_updated to 0 clients
+2026-04-21 11:11:08,208 - root - INFO - Initializing KDS cache...
+2026-04-21 11:11:08,209 - root - INFO - Fetching active orders since fiscal day start: 2026-04-21 03:00:00
+2026-04-21 11:11:08,209 - root - INFO - Ruta obtenida de database.txt: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:11:08,209 - root - INFO - Conectando a la base de datos en: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:11:08,444 - root - INFO - Cache initialized with 2 orders. 0 states restored from persistence.
+2026-04-21 11:11:08,445 - root - INFO - KDS Polling Service started.
+2026-04-21 11:11:08,445 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-21 11:11:08,450 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.96:5001
+2026-04-21 11:11:08,450 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 11:11:08,560 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:11:08,560 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:12:31,867 - root - INFO - Initializing KDS cache...
+2026-04-21 11:12:31,867 - root - INFO - Fetching active orders since fiscal day start: 2026-04-21 03:00:00
+2026-04-21 11:12:31,867 - root - INFO - Ruta obtenida de database.txt: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:12:31,867 - root - INFO - Conectando a la base de datos en: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:12:32,132 - root - INFO - Cache initialized with 2 orders. 0 states restored from persistence.
+2026-04-21 11:12:32,132 - root - INFO - KDS Polling Service started.
+2026-04-21 11:12:32,132 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-21 11:12:32,137 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.96:5001
+2026-04-21 11:12:32,137 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 11:12:35,890 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:35] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:12:35,894 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:12:35,894 - root - INFO - KDS Client disconnected
+2026-04-21 11:12:35,895 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:35] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:12:35,904 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:35] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:12:35,905 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:35] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:12:35,907 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:12:35,933 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:35] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:12:35,933 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:12:35,933 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:12:35,958 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:35] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:12:35,960 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:35] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:12:35,965 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:35] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:12:38,354 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:38] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:12:38,362 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:12:38,362 - root - INFO - KDS Client disconnected
+2026-04-21 11:12:38,362 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:38] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:12:38,369 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:12:38,373 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:38] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:12:38,374 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:38] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:12:38,397 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:38] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:12:38,398 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:12:38,399 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:12:38,415 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:38] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:12:38,419 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:38] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:12:38,422 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:38] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:12:45,154 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:12:45] "[35m[1mPOST /orders/8/status HTTP/1.1[0m" 500 -
+2026-04-21 11:13:05,249 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:13:05] "[35m[1mPOST /orders/7/items/17/status HTTP/1.1[0m" 500 -
+2026-04-21 11:13:10,760 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:13:10] "[35m[1mPOST /orders/8/status HTTP/1.1[0m" 500 -
+2026-04-21 11:13:50,155 - root - INFO - Initializing KDS cache...
+2026-04-21 11:13:50,155 - root - INFO - Fetching active orders since fiscal day start: 2026-04-21 03:00:00
+2026-04-21 11:13:50,155 - root - INFO - Ruta obtenida de database.txt: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:13:50,155 - root - INFO - Conectando a la base de datos en: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:13:50,407 - root - INFO - Cache initialized with 2 orders. 0 states restored from persistence.
+2026-04-21 11:13:50,407 - root - INFO - KDS Polling Service started.
+2026-04-21 11:13:50,407 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-21 11:13:50,412 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.96:5001
+2026-04-21 11:13:50,412 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 11:14:01,472 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:01] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:14:01,479 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:14:01,480 - root - INFO - KDS Client disconnected
+2026-04-21 11:14:01,480 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:01] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:14:01,492 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:14:01,496 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:01] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:14:01,497 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:01] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:14:01,524 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:01] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:14:01,524 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:14:01,525 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:14:01,543 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:01] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:14:01,547 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:01] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:14:02,219 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:14:02,223 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:14:02,224 - root - INFO - KDS Client disconnected
+2026-04-21 11:14:02,224 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:14:02,232 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:14:02,234 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:14:02,236 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:14:02,267 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:14:02,268 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:14:02,269 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:14:02,283 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:14:02,287 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:14:02,850 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:14:02,855 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:14:02,855 - root - INFO - KDS Client disconnected
+2026-04-21 11:14:02,855 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:14:02,862 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:14:02,865 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:14:02,866 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:14:02,884 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:14:02,885 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:14:02,885 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:14:02,902 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:14:02,905 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:02] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:14:04,491 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:04] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:14:27,882 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:27] "[35m[1mPOST /orders/8/status HTTP/1.1[0m" 500 -
+2026-04-21 11:14:30,610 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:30] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:14:31,575 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:31] "[35m[1mPOST /orders/7/status HTTP/1.1[0m" 500 -
+2026-04-21 11:14:33,756 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:33] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:14:33,762 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:14:33,762 - root - INFO - KDS Client disconnected
+2026-04-21 11:14:33,762 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:33] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:14:33,772 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:33] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:14:33,773 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:33] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:14:33,774 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:33] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:14:33,798 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:33] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:14:33,798 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:14:33,799 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:14:33,815 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:33] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:14:33,820 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:33] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:14:35,274 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:35] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:14:35,279 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:14:35,279 - root - INFO - KDS Client disconnected
+2026-04-21 11:14:35,279 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:35] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:14:35,287 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:14:35,291 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:35] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:14:35,292 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:35] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:14:35,318 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:35] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:14:35,319 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:14:35,320 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:14:35,335 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:35] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:14:35,338 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:35] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:14:35,984 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:35] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:14:35,989 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:14:35,989 - root - INFO - KDS Client disconnected
+2026-04-21 11:14:35,989 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:35] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:14:35,996 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:14:35,999 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:35] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:14:36,001 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:36] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:14:36,018 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:36] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:14:36,018 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:14:36,019 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:14:36,034 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:36] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:14:36,039 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:14:36] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:16:08,542 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:16:08,543 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:16:08,549 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:16:08] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:30:23,097 - root - INFO - Initializing KDS cache...
+2026-04-21 11:30:23,097 - root - INFO - Fetching active orders since fiscal day start: 2026-04-21 03:00:00
+2026-04-21 11:30:23,097 - root - INFO - Ruta obtenida de database.txt: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:30:23,097 - root - INFO - Conectando a la base de datos en: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:30:23,346 - root - INFO - Cache initialized with 2 orders. 0 states restored from persistence.
+2026-04-21 11:30:23,346 - root - INFO - KDS Polling Service started.
+2026-04-21 11:30:23,346 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-21 11:30:23,351 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.96:5001
+2026-04-21 11:30:23,351 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 11:30:24,540 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:30:24,540 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:30:46,948 - root - INFO - Initializing KDS cache...
+2026-04-21 11:30:46,949 - root - INFO - Fetching active orders since fiscal day start: 2026-04-21 03:00:00
+2026-04-21 11:30:46,949 - root - INFO - Ruta obtenida de database.txt: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:30:46,949 - root - INFO - Conectando a la base de datos en: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:30:47,183 - root - INFO - Cache initialized with 2 orders. 0 states restored from persistence.
+2026-04-21 11:30:47,183 - root - INFO - KDS Polling Service started.
+2026-04-21 11:30:47,183 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-21 11:30:47,188 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.96:5001
+2026-04-21 11:30:47,188 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 11:30:51,178 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:30:51] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:30:51,182 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:30:51,183 - root - INFO - KDS Client disconnected
+2026-04-21 11:30:51,183 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:30:51] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:30:51,192 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:30:51] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:30:51,194 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:30:51] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:30:51,196 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:30:51] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:30:51,225 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:30:51] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:30:51,226 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:30:51,226 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:30:51,246 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:30:51] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:30:51,249 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:30:51] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:30:51,253 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:30:51] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:30:54,200 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:30:54] "[35m[1mPOST /orders/7/status HTTP/1.1[0m" 500 -
+2026-04-21 11:31:15,788 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:15] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:31:15,796 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:31:15,796 - root - INFO - KDS Client disconnected
+2026-04-21 11:31:15,796 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:15] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:31:15,805 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:31:15,809 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:15] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:31:15,812 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:15] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:31:15,839 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:15] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:31:15,840 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:31:15,840 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:31:15,857 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:15] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:31:15,859 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:15] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:31:16,444 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:16] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:31:16,448 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:31:16,449 - root - INFO - KDS Client disconnected
+2026-04-21 11:31:16,449 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:16] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:31:16,457 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:31:16,460 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:16] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:31:16,461 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:16] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:31:16,481 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:16] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:31:16,482 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:31:16,483 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:31:16,497 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:16] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:31:16,500 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:16] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:31:17,488 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:17] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:31:19,923 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:19] "[35m[1mPOST /orders/7/status HTTP/1.1[0m" 500 -
+2026-04-21 11:31:21,660 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:21] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:31:21,664 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:31:21,664 - root - INFO - KDS Client disconnected
+2026-04-21 11:31:21,665 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:21] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:31:21,674 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:31:21,676 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:21] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:31:21,677 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:21] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:31:21,704 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:21] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:31:21,704 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:31:21,705 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:31:21,721 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:21] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:31:21,724 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:21] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:31:21,726 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:21] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:31:25,301 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:31:25,308 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:31:25,308 - root - INFO - KDS Client disconnected
+2026-04-21 11:31:25,309 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:31:25,316 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:31:25,318 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:31:25,319 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:31:25,348 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:31:25,349 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:31:25,349 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:31:25,364 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:31:25,367 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:31:25,368 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:31:25,790 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:31:25,795 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:31:25,795 - root - INFO - KDS Client disconnected
+2026-04-21 11:31:25,795 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:31:25,804 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:31:25,806 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:31:25,806 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:31:25,824 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:31:25,824 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:31:25,824 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:31:25,840 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:31:25,843 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:31:25,845 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:25] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:31:27,852 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:27] "[35m[1mPOST /orders/7/status HTTP/1.1[0m" 500 -
+2026-04-21 11:31:30,176 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:30] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:31:30,183 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:31:30,183 - root - INFO - KDS Client disconnected
+2026-04-21 11:31:30,183 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:30] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:31:30,193 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:31:30,195 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:30] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:31:30,196 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:30] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:31:30,223 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:30] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:31:30,223 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:31:30,224 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:31:30,236 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:30] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:31:30,239 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:31:30] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:37:06,570 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:37:06] "[35m[1mGET /alert-sound.mp3 HTTP/1.1[0m" 206 -
+2026-04-21 11:45:49,661 - root - INFO - Initializing KDS cache...
+2026-04-21 11:45:49,661 - root - INFO - Fetching active orders since fiscal day start: 2026-04-21 03:00:00
+2026-04-21 11:45:49,662 - root - INFO - Ruta obtenida de database.txt: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:45:49,662 - root - INFO - Conectando a la base de datos en: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:45:49,915 - root - INFO - Cache initialized with 2 orders. 0 states restored from persistence.
+2026-04-21 11:45:49,915 - root - INFO - KDS Polling Service started.
+2026-04-21 11:45:49,915 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-21 11:45:49,921 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.96:5001
+2026-04-21 11:45:49,921 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 11:45:50,380 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:45:50,380 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:45:50,387 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:45:50] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:45:50,428 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:45:50] "[35m[1mGET /alert-sound.mp3 HTTP/1.1[0m" 206 -
+2026-04-21 11:45:55,682 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:45:55] "[35m[1mPOST /orders/7/status HTTP/1.1[0m" 500 -
+2026-04-21 11:49:19,443 - root - INFO - Initializing KDS cache...
+2026-04-21 11:49:19,443 - root - INFO - Fetching active orders since fiscal day start: 2026-04-21 03:00:00
+2026-04-21 11:49:19,443 - root - INFO - Ruta obtenida de database.txt: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:49:19,443 - root - INFO - Conectando a la base de datos en: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:49:19,692 - root - INFO - Cache initialized with 2 orders. 1 states restored from persistence.
+2026-04-21 11:49:19,692 - root - INFO - KDS Polling Service started.
+2026-04-21 11:49:19,692 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-21 11:49:19,697 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.96:5001
+2026-04-21 11:49:19,697 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 11:49:20,070 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:49:20,071 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:49:22,507 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:22] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:49:22,511 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:49:22,512 - root - INFO - KDS Client disconnected
+2026-04-21 11:49:22,512 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:22] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:49:22,520 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:22] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:49:22,521 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:22] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:49:22,525 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:49:22,553 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:22] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:49:22,553 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:49:22,554 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:49:22,572 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:22] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:49:22,575 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:22] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:49:22,580 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:22] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:49:23,179 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:49:23,183 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:49:23,183 - root - INFO - KDS Client disconnected
+2026-04-21 11:49:23,184 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:49:23,191 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:49:23,193 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:49:23,196 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:49:23,213 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:49:23,215 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:49:23,215 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:49:23,234 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:49:23,238 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:49:23,239 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:49:23,671 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:49:23,676 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:49:23,676 - root - INFO - KDS Client disconnected
+2026-04-21 11:49:23,677 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:49:23,685 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:49:23,688 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:49:23,689 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:49:23,709 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:49:23,710 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:49:23,710 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:49:23,729 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:49:23,733 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:49:23,734 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:23] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:49:24,043 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:24] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:49:24,048 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:49:24,048 - root - INFO - KDS Client disconnected
+2026-04-21 11:49:24,049 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:24] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:49:24,056 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:49:24,059 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:24] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:49:24,061 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:24] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:49:24,081 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:24] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:49:24,082 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:49:24,083 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:49:24,104 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:24] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:49:24,108 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:24] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:49:24,108 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:24] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:49:26,350 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-21 11:49:26,350 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:26] "POST /orders/7/status HTTP/1.1" 200 -
+2026-04-21 11:49:33,713 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:33] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:49:35,802 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:49:35] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:50:31,205 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:50:31] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:50:33,045 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-21 11:50:33,046 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:50:33] "POST /orders/7/status HTTP/1.1" 200 -
+2026-04-21 11:50:35,493 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:50:35] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:50:35,497 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:50:35] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:54:00,667 - root - INFO - Initializing KDS cache...
+2026-04-21 11:54:00,667 - root - INFO - Fetching active orders since fiscal day start: 2026-04-21 03:00:00
+2026-04-21 11:54:00,667 - root - INFO - Ruta obtenida de database.txt: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:54:00,668 - root - INFO - Conectando a la base de datos en: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:54:00,908 - root - INFO - Cache initialized with 2 orders. 1 states restored from persistence.
+2026-04-21 11:54:00,908 - root - INFO - KDS Polling Service started.
+2026-04-21 11:54:00,909 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-21 11:54:00,913 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.96:5001
+2026-04-21 11:54:00,913 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 11:54:29,906 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:29] "GET / HTTP/1.1" 200 -
+2026-04-21 11:54:29,918 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:54:29,924 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:29] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:54:29,925 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:29] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:54:29,975 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:29] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:54:29,977 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:54:29,977 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:54:30,025 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:30] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:54:30,028 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:30] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:54:30,043 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:30] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:54:40,378 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-21 11:54:40,378 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:40] "POST /orders/7/status HTTP/1.1" 200 -
+2026-04-21 11:54:43,805 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:43] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:54:44,762 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:44] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:54:46,024 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:46] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:54:46,030 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:54:46,030 - root - INFO - KDS Client disconnected
+2026-04-21 11:54:46,031 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:46] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:54:46,038 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:54:46,045 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:46] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:54:46,046 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:46] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:54:46,075 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:46] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:54:46,076 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:54:46,077 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:54:46,095 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:46] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:54:46,096 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:46] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:54:52,753 - root - INFO - Initializing KDS cache...
+2026-04-21 11:54:52,753 - root - INFO - Fetching active orders since fiscal day start: 2026-04-21 03:00:00
+2026-04-21 11:54:52,753 - root - INFO - Ruta obtenida de database.txt: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:54:52,753 - root - INFO - Conectando a la base de datos en: D:\RUMBOS\Rumbos.mdb
+2026-04-21 11:54:52,991 - root - INFO - Cache initialized with 2 orders. 1 states restored from persistence.
+2026-04-21 11:54:52,992 - root - INFO - KDS Polling Service started.
+2026-04-21 11:54:52,992 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-21 11:54:52,997 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.96:5001
+2026-04-21 11:54:52,997 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 11:54:54,532 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:54:54,532 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:54:55,941 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:55] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:54:55,947 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:54:55,947 - root - INFO - KDS Client disconnected
+2026-04-21 11:54:55,948 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:55] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:54:55,954 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:54:55,957 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:55] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:54:55,959 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:55] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:54:55,977 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:55] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:54:55,979 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:54:55,979 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:54:55,997 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:55] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:54:56,001 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:56] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 11:54:56,427 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:56] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-21 11:54:56,431 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-21 11:54:56,432 - root - INFO - KDS Client disconnected
+2026-04-21 11:54:56,432 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:56] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-21 11:54:56,439 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-21 11:54:56,441 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:56] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-21 11:54:56,443 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:56] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-21 11:54:56,462 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:56] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 11:54:56,462 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 11:54:56,463 - root - INFO - Initial state sent: 2 orders transmitted
+2026-04-21 11:54:56,480 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:56] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 11:54:56,481 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:56] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -

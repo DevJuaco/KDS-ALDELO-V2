@@ -37,3 +37,5 @@ frontend/release/*
 dist/*
 kds_api.exe
 output/*
+kds.accdb
+kds.laccdb

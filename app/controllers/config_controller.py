@@ -113,17 +113,18 @@ def import_order_state():
         return jsonify({'error': str(e)}), 500
 
 
-@config_bp.route('/state/clear-delivered', methods=['POST'])
-def clear_delivered_orders():
-    """Limpia manualmente todas las órdenes con estado DELIVERED"""
+@config_bp.route('/state/stats', methods=['GET'])
+def get_order_state_stats():
+    """Obtiene estadísticas de la base de datos de estados"""
     try:
         from main_api import order_service
-        
-        order_service.state_manager.clear_all_delivered()
-        
+
+        stats = order_service.state_manager.get_stats()
+
         return jsonify({
             'success': True,
-            'message': 'Órdenes entregadas eliminadas correctamente'
+            'stats': stats,
+            'db_path': order_service.state_manager.get_state_file_path()
         }), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
