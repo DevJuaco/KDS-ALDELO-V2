@@ -1,4 +1,5 @@
 import os
+import sys
 import pyodbc
 from datetime import datetime, time
 from threading import Lock
@@ -23,8 +24,11 @@ class OrderStateManager:
         """
         # Convertir a ruta absoluta
         if not os.path.isabs(db_path):
-            # Si es relativa, construirla respecto al directorio raíz del proyecto
-            project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            # En modo frozen (PyInstaller) __file__ apunta a _MEIPASS, no al exe
+            if getattr(sys, 'frozen', False):
+                project_root = os.path.dirname(sys.executable)
+            else:
+                project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
             db_path = os.path.join(project_root, db_path)
         
         # Normalizar la ruta

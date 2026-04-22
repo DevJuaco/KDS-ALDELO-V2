@@ -39,3 +39,9 @@ kds_api.exe
 output/*
 kds.accdb
 kds.laccdb
+database.txt
+kds.accdb
+kds.laccdb
+database.txt
+orders_state.json
+orders_state.json.backup

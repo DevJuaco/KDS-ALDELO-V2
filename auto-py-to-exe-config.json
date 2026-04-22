@@ -36,22 +36,29 @@
                 "werkzeug",
                 "werkzeug.serving",
                 "werkzeug.routing",
+                "werkzeug.routing.converters",
                 "werkzeug.exceptions",
                 "jinja2",
                 "click",
                 "itsdangerous",
                 "logging.handlers",
-                "winreg"
+                "winreg",
+                "app.models.order",
+                "app.repositories.order_repository",
+                "app.services.order_service",
+                "app.utils.order_state_manager",
+                "app.controllers.order_controller",
+                "app.controllers.config_controller",
+                "app.websockets.order_socket",
+                "utils.database",
+                "utils.helpers",
+                "utils.logging_config",
+                "utils.image_storage"
             ]
         },
         {
             "optionDest": "datas",
-            "value": [
-                ["d:\\KDSALDELOV2\\zones.json", "."],
-                ["d:\\KDSALDELOV2\\database.txt", "."],
-                ["d:\\KDSALDELOV2\\utils", "utils"],
-                ["d:\\KDSALDELOV2\\app", "app"]
-            ]
+            "value": []
         }
     ],
     "nonPyinstallerOptions": {

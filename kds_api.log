@@ -33448,3 +33448,26 @@
 2026-04-21 11:54:56,463 - root - INFO - Initial state sent: 2 orders transmitted
 2026-04-21 11:54:56,480 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:56] "GET /config/ordertypes HTTP/1.1" 200 -
 2026-04-21 11:54:56,481 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 11:54:56] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-21 20:29:01,437 - root - INFO - Initializing KDS cache...
+2026-04-21 20:29:01,437 - root - INFO - Fetching active orders since fiscal day start: 2026-04-21 03:00:00
+2026-04-21 20:29:01,437 - root - INFO - Ruta obtenida de database.txt: D:\INFORMECIERRE\burgermusic.mdb
+2026-04-21 20:29:01,437 - root - INFO - Conectando a la base de datos en: D:\INFORMECIERRE\burgermusic.mdb
+2026-04-21 20:29:01,937 - root - INFO - Cache initialized with 0 orders. 0 states restored from persistence.
+2026-04-21 20:29:01,937 - root - INFO - KDS Polling Service started.
+2026-04-21 20:29:01,937 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-21 20:29:01,974 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.5:5001
+2026-04-21 20:29:01,974 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 20:29:13,854 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 20:29:13] "GET / HTTP/1.1" 200 -
+2026-04-21 20:29:13,897 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 20:29:13] "GET /assets/index-DxG08r1p.css HTTP/1.1" 200 -
+2026-04-21 20:29:14,049 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 20:29:14] "GET /assets/index-C8Ddxl5X.js HTTP/1.1" 200 -
+2026-04-21 20:29:14,129 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 20:29:14] "GET /config/zones HTTP/1.1" 200 -
+2026-04-21 20:29:14,132 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-21 20:29:14,135 - root - INFO - Initial state sent: 0 orders transmitted
+2026-04-21 20:30:01,417 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-21 20:30:01,728 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 20:30:01] "GET /config/ordertypes HTTP/1.1" 200 -
+2026-04-21 20:30:01,735 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 20:30:01] "[35m[1mGET /notification-sound.mp3 HTTP/1.1[0m" 206 -
+2026-04-21 20:30:22,731 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-21 20:30:22,731 - werkzeug - INFO - 127.0.0.1 - - [21/Apr/2026 20:30:22] "POST /orders/56185/status HTTP/1.1" 200 -
