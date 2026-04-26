@@ -90,7 +90,11 @@ class OrderService:
         while not self._stop_event.is_set():
             try:
                 new_sync_time = datetime.now()
-                modified_orders = self.repository.get_orders_modified_since(self._last_sync)
+                # Subtract 5 seconds to create an overlap window. 
+                # This prevents missing orders due to MS Access truncating milliseconds from timestamps,
+                # or any delay in saving orders to the database.
+                overlap_time = self._last_sync - timedelta(seconds=5)
+                modified_orders = self.repository.get_orders_modified_since(overlap_time)
                 
                 for order in modified_orders:
                     self._update_order_in_cache(order)
