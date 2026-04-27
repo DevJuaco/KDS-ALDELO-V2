@@ -178,3 +178,72 @@
 2026-04-26 18:49:40,650 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:49:40] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
 2026-04-26 18:49:40,900 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:49:40] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
 2026-04-26 18:49:40,963 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:49:40] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
+2026-04-26 18:51:31,971 - root - INFO - Initializing KDS cache...
+2026-04-26 18:51:31,971 - root - INFO - Fetching active orders since fiscal day start: 2026-04-26 03:00:00
+2026-04-26 18:51:31,972 - root - INFO - Ruta obtenida de database.txt: D:\BurgerMusic\burgermusic.mdb
+2026-04-26 18:51:31,972 - root - INFO - Conectando a la base de datos en: D:\BurgerMusic\burgermusic.mdb
+2026-04-26 18:51:32,187 - root - INFO - Cache initialized with 0 orders. 4 states restored from persistence.
+2026-04-26 18:51:32,187 - root - INFO - KDS Polling Service started.
+2026-04-26 18:51:32,187 - root - INFO - Starting KDS Server (Raw WebSockets) on port 5001...
+2026-04-26 18:51:32,193 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.96:5001
+2026-04-26 18:51:32,193 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-26 18:51:36,746 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:51:36] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-26 18:51:36,757 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:51:36] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-26 18:51:36,933 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:51:36] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-26 18:51:37,274 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:51:37] "GET /config/zones HTTP/1.1" 200 -
+2026-04-26 18:51:37,276 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:51:37] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-26 18:51:37,277 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-26 18:51:37,279 - root - INFO - Initial state sent: 0 orders transmitted
+2026-04-26 18:51:38,492 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:51:38] "[36mGET / HTTP/1.1[0m" 304 -
+2026-04-26 18:51:38,496 - root - INFO - WebSocket session ended: Connection closed: 1001 
+2026-04-26 18:51:38,496 - root - INFO - KDS Client disconnected
+2026-04-26 18:51:38,496 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:51:38] "GET /ws/orders HTTP/1.1" 200 -
+2026-04-26 18:51:38,797 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:51:38] "[36mGET /assets/index-DxG08r1p.css HTTP/1.1[0m" 304 -
+2026-04-26 18:51:38,813 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:51:38] "[36mGET /assets/index-C8Ddxl5X.js HTTP/1.1[0m" 304 -
+2026-04-26 18:51:39,143 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:51:39] "GET /config/zones HTTP/1.1" 200 -
+2026-04-26 18:51:39,144 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:51:39] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-26 18:51:39,144 - root - INFO - KDS Client connected via Raw WebSocket
+2026-04-26 18:51:39,145 - root - INFO - Initial state sent: 0 orders transmitted
+2026-04-26 18:54:35,877 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-26 18:54:36,210 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:54:36] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
+2026-04-26 18:54:36,212 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:54:36] "[35m[1mGET /notification-sound.mp3 HTTP/1.1[0m" 206 -
+2026-04-26 18:54:38,584 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:54:41,264 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:54:43,966 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-26 18:54:43,976 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:54:43] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
+2026-04-26 18:54:46,667 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:54:49,369 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:54:57,426 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-26 18:54:57,752 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:54:57] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
+2026-04-26 18:55:00,132 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:55:02,819 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:55:05,527 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-26 18:55:05,537 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:55:05] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
+2026-04-26 18:55:08,210 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:55:16,218 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-26 18:55:16,537 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:55:16] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
+2026-04-26 18:55:18,921 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:55:21,612 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:55:32,282 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-26 18:55:32,292 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:55:32] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
+2026-04-26 18:55:34,971 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:55:37,659 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:55:51,053 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-26 18:55:51,369 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:55:51] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
+2026-04-26 18:55:51,370 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:55:51] "[36mGET /favicon.svg HTTP/1.1[0m" 304 -
+2026-04-26 18:55:53,733 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:55:56,408 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:55:59,096 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-26 18:55:59,100 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:55:59] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
+2026-04-26 18:56:01,818 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:56:04,498 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:56:07,180 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-26 18:56:07,495 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:56:07] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
+2026-04-26 18:56:09,882 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:56:12,544 - root - INFO - Broadcasting order_updated to 1 clients
+2026-04-26 18:56:20,597 - root - INFO - Broadcasting order_created to 1 clients
+2026-04-26 18:56:20,602 - werkzeug - INFO - 127.0.0.1 - - [26/Apr/2026 18:56:20] "[33mGET /config/ordertypes HTTP/1.1[0m" 404 -
+2026-04-26 18:56:23,314 - root - INFO - Broadcasting order_updated to 1 clients
